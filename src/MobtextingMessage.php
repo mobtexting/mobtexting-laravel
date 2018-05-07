@@ -1,0 +1,159 @@
+<?php
+
+namespace NotificationChannels\Mobtexting;
+
+abstract class MobtextingMessage
+{
+    /**
+     * The message content.
+     *
+     * @var string
+     */
+    public $text;
+
+    /**
+     * The phone number the message should be sent from.
+     *
+     * @var string
+     */
+    public $from;
+
+    /**
+     * The phone number the message should be sent to.
+     *
+     * @var string
+     */
+    public $to;
+
+    /**
+     * @var array
+     */
+    public $params = [];
+
+    /**
+     * Create a message object.
+     * @param string $text
+     * @return static
+     */
+    public static function create($text = '')
+    {
+        return new static($text);
+    }
+
+    /**
+     * Create a new message instance.
+     *
+     * @param  string $text
+     */
+    public function __construct($text = '')
+    {
+        $this->text = $text;
+    }
+
+    /**
+     * Set the message content.
+     *
+     * @param  string $text
+     * @return $this
+     */
+    public function text($text)
+    {
+        $this->text = $text;
+
+        return $this;
+    }
+
+    /**
+     * Set the phone number the message should be sent from.
+     *
+     * @param  string $from
+     * @return $this
+     */
+    public function from($from)
+    {
+        $this->from = $from;
+
+        return $this;
+    }
+
+    /**
+     * Set the phone number the message should be sent to.
+     *
+     * @param  string $from
+     * @return $this
+     */
+    public function to($to)
+    {
+        $this->to = $to;
+
+        return $this;
+    }
+
+    /**
+     * Get the from address.
+     *
+     * @return string
+     */
+    public function getFrom()
+    {
+        return $this->from;
+    }
+
+    /**
+     * Get the phone number the message should be sent to.
+     *
+     * @return  string
+     */
+    public function getTo()
+    {
+        return $this->to;
+    }
+
+    /**
+     * Get the message content.
+     *
+     * @return  string
+     */
+    public function getText()
+    {
+        return $this->text;
+    }
+
+    /**
+     * Get the value of params
+     *
+     * @return array
+     */
+    public function getParams()
+    {
+        return $this->params;
+    }
+
+    /**
+     * Set Param
+     *
+     * @param string $key
+     * @param mixed $value
+     * @return self
+     */
+    public function param($key, $value)
+    {
+        $this->params[$key] = $value;
+
+        return $this;
+    }
+
+    /**
+     * Set the value of params
+     *
+     * @param  array  $params
+     *
+     * @return  self
+     */
+    public function setParams(array $params)
+    {
+        $this->params = array_merge($this->params, $params);
+
+        return $this;
+    }
+}
