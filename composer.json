@@ -5,6 +5,7 @@
     "license": "MIT",
     "require": {
         "php": ">=5.5.9",
+        "mobtexting/sdk": "dev-master",
         "illuminate/notifications": "^5",
         "illuminate/support": "^5",
         "illuminate/events": "^5"
@@ -35,5 +36,6 @@
                 "NotificationChannels\\Mobtexting\\MobtextingProvider"
             ]
         }
-    }
+    },
+    "minimum-stability": "dev"
 }

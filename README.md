@@ -5,7 +5,7 @@ This package makes it easy to send [Mobtexting notifications](https://mobtexting
 ## Contents
 
 - [Installation](#installation)
-	- [Setting up your Mobtexting account](#setting-up-your-twilio-account)
+	- [Setting up your Mobtexting account](#setting-up-your-account)
 - [Usage](#usage)
 	- [Available Message methods](#available-message-methods)
 - [Changelog](#changelog)

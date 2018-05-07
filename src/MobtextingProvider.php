@@ -3,7 +3,7 @@
 namespace NotificationChannels\Mobtexting;
 
 use Illuminate\Support\ServiceProvider;
-use Mobtexting\Rest\Client as MobtextingClient;
+use Mobtexting\Client as MobtextingClient;
 
 class MobtextingProvider extends ServiceProvider
 {
