@@ -2,7 +2,7 @@
 
 namespace NotificationChannels\Mobtexting;
 
-use Mobtexting\Rest\Client as MobtextingService;
+use Mobtexting\Client as MobtextingService;
 use NotificationChannels\Mobtexting\Exceptions\CouldNotSendNotification;
 
 class Mobtexting
@@ -52,14 +52,14 @@ class Mobtexting
      *
      * @param MobtextingSmsMessage $message
      * @param string $to
-     * @return \Mobtexting\Rest\Api\V2010\Account\MessageInstance
+     * @return \Mobtexting\Message\Client
      * @throws CouldNotSendNotification
      */
     protected function sendSmsMessage(MobtextingSmsMessage $message, $to)
     {
         $params = [
             'from' => $this->getFrom($message),
-            'body' => $message->getText(),
+            'text' => $message->getText(),
             'to' => $message->getTo() ?: $to,
         ];
 

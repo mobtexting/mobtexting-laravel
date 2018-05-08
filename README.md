@@ -44,7 +44,7 @@ Add your Mobtexting Auth Token, and From Number (optional) to your `config/servi
     'username' => env('MOBTEXTING_USERNAME'), // optional when using auth token
     'password' => env('MOBTEXTING_PASSWORD'), // optional when using auth token
     'token' => env('MOBTEXTING_AUTH_TOKEN'), // optional when using username and password
-    'from' => env('TWILIO_FROM'), // optional
+    'from' => env('MOBTEXTING_FROM'), // optional
 ],
 ...
 ```
@@ -73,7 +73,7 @@ class AccountApproved extends Notification
 }
 ```
 
-In order to let your Notification know which phone are you sending/calling to, the channel will look for the `phone_number` attribute of the Notifiable model. If you want to override this behaviour, add the `routeNotificationForMobtexting` method to your Notifiable model.
+In order to let your Notification know which phone are you sending to, the channel will look for the `phone_number` attribute and `mobile` of the Notifiable model. If you want to override this behaviour, add the `routeNotificationForMobtexting` method to your Notifiable model.
 
 ```php
 public function routeNotificationForMobtexting()

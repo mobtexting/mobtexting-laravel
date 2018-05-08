@@ -21,7 +21,7 @@ class MobtextingChannel
     protected $events;
 
     /**
-     * TwilioChannel constructor.
+     * MobtextingChannel constructor.
      *
      * @param Mobtexting     $client
      * @param Dispatcher $events
