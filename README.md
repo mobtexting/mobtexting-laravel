@@ -45,6 +45,7 @@ Add your Mobtexting Auth Token, and From Number (optional) to your `config/servi
     'password' => env('MOBTEXTING_PASSWORD'), // optional when using auth token
     'token' => env('MOBTEXTING_AUTH_TOKEN'), // optional when using username and password
     'from' => env('MOBTEXTING_FROM'), // optional
+    'service' => env('MOBTEXTING_SERVICE'), // optional
 ],
 ...
 ```

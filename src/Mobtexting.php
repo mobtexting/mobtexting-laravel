@@ -58,9 +58,10 @@ class Mobtexting
     protected function sendSmsMessage(MobtextingSmsMessage $message, $to)
     {
         $params = [
-            'from' => $this->getFrom($message),
-            'text' => $message->getText(),
-            'to' => $message->getTo() ?: $to,
+            'from'    => $this->getFrom($message),
+            'text'    => $message->getText(),
+            'service' => $message->getService() ?: $this->config->getService(),
+            'to'      => $message->getTo() ?: $to,
         ];
 
         $params = array_merge($message->getParams(), $params);

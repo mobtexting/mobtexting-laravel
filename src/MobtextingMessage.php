@@ -19,6 +19,13 @@ abstract class MobtextingMessage
     public $from;
 
     /**
+     * The service the message should be sent from.
+     *
+     * @var string
+     */
+    public $service;
+
+    /**
      * The phone number the message should be sent to.
      *
      * @var string
@@ -59,6 +66,19 @@ abstract class MobtextingMessage
     public function text($text)
     {
         $this->text = $text;
+
+        return $this;
+    }
+
+        /**
+     * Set the message content.
+     *
+     * @param  string $text
+     * @return $this
+     */
+    public function service($service)
+    {
+        $this->service = $service;
 
         return $this;
     }

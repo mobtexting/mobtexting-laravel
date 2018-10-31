@@ -58,4 +58,14 @@ class MobtextingConfig
     {
         return $this->config['from'];
     }
+
+    /**
+     * Get the default from address.
+     *
+     * @return string
+     */
+    public function getService()
+    {
+        return $this->config['service'];
+    }
 }
