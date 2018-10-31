@@ -70,7 +70,7 @@ abstract class MobtextingMessage
         return $this;
     }
 
-        /**
+    /**
      * Set the message content.
      *
      * @param  string $text
@@ -137,6 +137,16 @@ abstract class MobtextingMessage
     public function getText()
     {
         return $this->text;
+    }
+
+    /**
+     * Get the service.
+     *
+     * @return  string
+     */
+    public function getService()
+    {
+        return $this->service;
     }
 
     /**
