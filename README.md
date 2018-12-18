@@ -20,7 +20,7 @@ This package makes it easy to send [Mobtexting notifications](https://mobtexting
 You can install the package via composer:
 
 ``` bash
-composer require mobtexting/laravel
+composer require mobtexting/mobtexting-laravel
 ```
 
 Add the service provider (only required on Laravel 5.4 or lower):
