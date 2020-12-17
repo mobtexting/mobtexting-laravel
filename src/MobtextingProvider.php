@@ -2,6 +2,7 @@
 
 namespace NotificationChannels\Mobtexting;
 
+use Illuminate\Support\Arr;
 use Illuminate\Support\ServiceProvider;
 use Mobtexting\Client as MobtextingClient;
 
@@ -23,13 +24,13 @@ class MobtextingProvider extends ServiceProvider
 
         $this->app->bind(MobtextingClient::class, function () {
             $config = $this->app['config']['services.mobtexting'];
-            $username = array_get($config, 'username');
+            $username = Arr::get($config, 'username');
             if (!empty($username)) {
-                $password = array_get($config, 'password');
+                $password = Arr::get($config, 'password');
 
                 return new MobtextingClient($username, $password);
             } else {
-                $token = array_get($config, 'token');
+                $token = Arr::get($config, 'token');
 
                 return new MobtextingClient($token);
             }
