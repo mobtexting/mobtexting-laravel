@@ -4,7 +4,7 @@
     "homepage": "https://github.com/mobtexting/mobtexting-laravel",
     "license": "MIT",
     "require": {
-        "php": ">=7.4",
+        "php": "^7.4|^8.0|^8.1",
         "mobtexting/sdk": "^1.0",
         "illuminate/notifications": "^7|^8|^9.0",
         "illuminate/support": "^7|^8|^9.0",
